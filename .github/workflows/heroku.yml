@@ -15,3 +15,4 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "craftech-mulato" #Must be unique in Heroku
           heroku_email: "nahuel.cad@gmail.com"
+          usedocker: true
