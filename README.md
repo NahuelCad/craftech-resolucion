@@ -1,11 +1,13 @@
-# craftech-resolucion
+<img src="https://i.ibb.co/VM5MzBT/craftech-logo3.png=150x" width="250" height="250">
 
-En este repositorio se colocaran los archivos correspondientes a la resolucion de la prueba tecnica de craftech
+#### Prueba 3 - CI/CD
 
-Cada branch sera la resolucion de un punto
+Dockerizar un nginx con el index.html default.
+Elaborar un pipeline que ante cada cambio realizado sobre el index.html buildee la nueva imagen y la actualize en la plataforma elegida. (docker-compose, swarm, kuberenetes, etc.)
+Para la creacion del CI/CD se puede utilizar cualquier plataforma (CircleCI, Gitlab, Github, Bitbucket.)
 
-En este caso, este brach es para la resolucion del punto 3
+Resolucion:
 
-Para este caso tome como base una imagen de nginx pero modificando el index para ser modificado y que se pueda probar el ciclo.
-Para este caso arme el pipeline con github actions, este buildea la imagen y la sube al docker hub. A partir de ahi se puede
-actualizar en la plataforma deseada.
+Para la resolucion de esta prueba utilice una imagen de nginx como base y para el ci/cd utilice Github actions, el pipeline al ver un nuevo cambio en el codigo buildea la imagen y 
+la sube a docker hub para que desde ahi se pueda deployar por ejemplo a en la plataforma de azure a app engine, el cual al detectar una nueva imagen vuelve a deployar.
+
