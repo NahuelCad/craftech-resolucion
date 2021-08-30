@@ -1,13 +1,16 @@
 <img src="https://i.ibb.co/VM5MzBT/craftech-logo3.png=150x" width="250" height="250">
 
-#### Prueba 3 - CI/CD
+#### Prueba 2 - Despliegue de una aplicación Django y React.js
 
-Dockerizar un nginx con el index.html default.
-Elaborar un pipeline que ante cada cambio realizado sobre el index.html buildee la nueva imagen y la actualize en la plataforma elegida. (docker-compose, swarm, kuberenetes, etc.)
-Para la creacion del CI/CD se puede utilizar cualquier plataforma (CircleCI, Gitlab, Github, Bitbucket.)
+Elaborar el deployment dockerizado de una aplicación en django (backend) con frontend en React.js contenida en el repositorio. Es necesario desplegar todos los servicios en un solo docker-compose.
+
+Se deben entregar los Dockerfiles pertinentes para elaborar el despliegue y justificar la forma en la que elabora el deployment (supervisor, scripts, docker-compose, kubernetes, etc)
+
+Subir todo lo elaborado a un repositorio (github, gitlab, bitbucket, etc). En el repositorio se debe incluir el código de la aplicación y un archivo README.md con instrucciones detalladas para compilar y desplegar la aplicación, tanto en una PC local como en la nube (AWS o GCP).
 
 Resolucion:
 
-Para la resolucion de esta prueba utilice una imagen de nginx como base y para el ci/cd utilice Github actions, el pipeline al ver un nuevo cambio en el codigo buildea la imagen y 
-la sube a docker hub para que desde ahi se pueda deployar por ejemplo a en la plataforma de azure a app engine, el cual al detectar una nueva imagen vuelve a deployar.
+Para la resolucion de este ejersicio utilice una imagen base de python y resolvi las dependencias para la parte del back end. Para la parte del front utilice una imagen de node. Para orquestar todo use un docker compose creado los volumenes necesarios y el servidor de nginx.
+
+Para deployar la aplicacion localmente se debe correr el comando de docker-compose up. En caso de querer correr la aplicacion en la nube se podrian tomar 2 caminos. El primero seria deployar la aplicacion en una virtual machine y levantarle de la misma manera con docker-compose y la segunda opcion seria usar kubernetes, en este caso se tomaria se buildea cada imagen y kubernetes la tomaria individualmente para crear los nodos dandole mayor escabilidad 
 
