@@ -17,7 +17,7 @@ El diagrama debe hacer un mejor uso de las soluciones distribuidas.
 Resolucion:
 
 
-<img src="https://i.ibb.co/CQs6SZR/infra.jpg" width="250" height="250">
+<img src="https://i.ibb.co/CQs6SZR/infra.jpg" >
 
 Para la resolucion del diseño propuesto utilice la plataforma en la nube de google (GCP)
 Debido a la necesidad de soportar cargas variables y tener alta disponibilidad base el diseño en la utulizacion de kubernetes para el frontend y el backend. De esa manera se podra tener gran cantidad de nodos y en caso de que alguno falle se recreara de inmediato. Tambien debido a la gran cantidad de carga que en teoria va a sufrir la aplicacion se necesita la utilizacion de un balanceador de carga que distribuya las llamadas de manera correcta.
