@@ -19,13 +19,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
-if not env('SECRET_KEY'):
-    warnings.warn((
-                      "Please define SECRET_KEY before importing {0}, as a fallback "
-                      "for when the environment variable is not available."
-                  ).format(__name__))
-else:
-    SECRET_KEY = env('SECRET_KEY')
+#if not env('SECRET_KEY'):
+#    warnings.warn((
+#                      "Please define SECRET_KEY before importing {0}, as a fallback "
+#                      "for when the environment variable is not available."
+#                  ).format(__name__))
+#else:
+#    SECRET_KEY = env('SECRET_KEY')
+
+SECRET_KEY='lmrffsgfhrilklg-za7#57vi!zr)ps8)2anyona25###dl)s-#s=7=vn_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DJANGO_DEBUG", True)
